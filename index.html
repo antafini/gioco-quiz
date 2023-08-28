@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>QuizMaster 3000</title>
+    <title>QuizDelMasterPalleGrosse 3000</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <div id="level-transition-message" class="loading-message">
+        Passaggio al livello successivo...
+        <div class="spinner"></div>
+    </div>    
     <div class="leaderboard">
         <h2>Classifica</h2>
         <ol id="leaderboard-list" class="score"></ol>
     </div>
     <div class="quiz-container">
+        <div id="new-game-message" class="loading-message">
+            Nuova partita in corso!!
+            <div class="spinner"></div>
+        </div>        
         <div class="header">
-            <h1>Benvenuti nel QuizMegTown 1000!</h1>
+            <h1>Benvenuti nel Quiz Del Master Palle Grosse 3000!</h1>
             <div class="timer">
                 <p>Time Left: <span id="time-left">600</span> seconds</p>
             </div>

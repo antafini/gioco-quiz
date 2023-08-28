@@ -5,207 +5,139 @@ const scoreElement = document.getElementById("score");
 const timeLeftElement = document.getElementById("time-left");
 const leaderboardList = document.getElementById("leaderboard-list");
 
-// Lista di domande
-const questions = [
-    {
-      text: "Quale pianeta è conosciuto come la 'Stella del Mattino' o la 'Stella della Sera'?",
-      options: ["Marte", "Venere", "Giove", "Saturno"],
-      correctOption: 1
-    },
-    {
-      text: "Chi scrisse l'opera '1984'?",
-      options: ["Ray Bradbury", "George Orwell", "F. Scott Fitzgerald", "Aldous Huxley"],
-      correctOption: 1
-    },
-    {
-      text: "Qual è l'organo più grande del corpo umano?",
-      options: ["Il fegato", "La pelle", "Il cervello", "Il cuore"],
-      correctOption: 1
-    },
-    {
-      text: "Quale scienziato formulò la legge della gravità?",
-      options: ["Nikola Tesla", "Isaac Newton", "Albert Einstein", "Galileo Galilei"],
-      correctOption: 1
-    },
-    {
-      text: "Qual è la capitale dell'Italia?",
-      options: ["Milano", "Firenze", "Napoli", "Roma"],
-      correctOption: 3
-    },
-    {
-      text: "Qual è l'elemento chimico con simbolo 'Fe'?",
-      options: ["Fosforo", "Fluoro", "Ferro", "Francio"],
-      correctOption: 2
-    },
-    {
-      text: "In quale continente si trova il deserto del Sahara?",
-      options: ["Asia", "Europa", "Africa", "America"],
-      correctOption: 2
-    },
-    {
-      text: "Qual è l'unità di misura della corrente elettrica?",
-      options: ["Volt (V)", "Ohm (Ω)", "Watt (W)", "Ampere (A)"],
-      correctOption: 3
-    },
-    {
-      text: "Quale artista è famoso per dipinti come 'La notte stellata' e 'Il campo di grano con i corvi'?",
-      options: ["Michelangelo", "Pablo Picasso", "Leonardo da Vinci", "Vincent van Gogh"],
-      correctOption: 3
-    },
-    {
-      text: "Qual è il libro sacro dell'ebraismo?",
-      options: ["Corano", "Tanakh", "Bibbia", "Vedas"],
-      correctOption: 1
-    },
-    {
-      text: "Quale famoso discorso inizia con le parole 'I have a dream'?",
-      options: ["Il discorso di Abraham Lincoln", "Il discorso di Martin Luther King Jr.", "Il discorso di Winston Churchill", "Il discorso di John F. Kennedy"],
-      correctOption: 1
-    },
-    {
-      text: "Qual è la montagna più alta del mondo?",
-      options: ["Monte Kilimanjaro", "Monte Aconcagua", "Monte Everest", "Monte McKinley (Denali)"],
-      correctOption: 2
-    },
-    {
-      text: "Quale fenomeno naturale è responsabile dell'arcobaleno?",
-      options: ["L'assorbimento selettivo dei colori", "La rifrazione della luce solare nelle gocce d'acqua", "L'interferenza tra onde luminose", "La fluorescenza dell'aria"],
-      correctOption: 1
-    },
-    {
-      text: "Quale famoso compositore è noto per le sue 'Quattro stagioni'?",
-      options: ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Antonio Vivaldi", "Johann Sebastian Bach"],
-      correctOption: 2
-    },
-    {
-      text: "Quale città è conosciuta come la 'Città eterna'?",
-      options: ["Atene", "Gerusalemme", "Roma", "Parigi"],
-      correctOption: 2
-    },
-    {
-      text: "Qual è il fiume più lungo del mondo?",
-      options: ["Il fiume Amazonas", "Il fiume Yangtze", "Il fiume Mississippi", "Il fiume Nilo"],
-      correctOption: 3
-    },
-    {
-      text: "Chi è stato il primo uomo a camminare sulla Luna?",
-      options: ["Buzz Aldrin", "John Glenn", "Neil Armstrong", "Yuri Gagarin"],
-      correctOption: 2
-    },
-    {
-      text: "Quale processo chimico fornisce energia alle cellule dei viventi?",
-      options: ["La sintesi proteica", "La fotosintesi", "La fermentazione", "La respirazione cellulare"],
-      correctOption: 3
-    },
-    {
-      text: "Qual è il pianeta più grande del sistema solare?",
-      options: ["Saturno", "Nettuno", "Giove", "Urano"],
-      correctOption: 2
-    },
-    {
-      text: "Qual è il fiume più lungo del mondo?",
-      options: ["Il fiume Amazonas", "Il fiume Yangtze", "Il fiume Mississippi", "Il fiume Nilo"],
-      correctOption: 3
-    }
-  ];
-
 // Variabili di stato
 let currentQuestionIndex = 0;
+let currentLevel = 0;
 let score = 0;
 let timeLeft = 600;
-let timerInterval;
+let timerInterval; 
+let optionsClickable = true;
 
-// Avvia la modalità gioco per il singolo giocatore
-function startSinglePlayer() {
-    clearInterval(timerInterval);
-    setupGame();
-    startTimer(); // Avvia il timer all'inizio del gioco
-}
+// Funzione per avviare il gioco in modalità giocatore singolo
+async function startSinglePlayer() {
+  clearInterval(timerInterval);
+  currentQuestionIndex = 0;
+  currentLevel = 0;
+  await loadQuestions(); // Carica le domande da JSON
 
-// Inizializza il gioco
-function setupGame() {
-    currentQuestionIndex = 0;
-    score = 0;
+  const loadingMessage = document.getElementById("new-game-message");
+  loadingMessage.style.display = "block";
+  optionsClickable = false;
+
+  startTimer();
+
+  setTimeout(() => {
+    loadingMessage.style.display = "none";
+    optionsClickable = true;
     showQuestion();
+  }, 2000);
 }
 
-// Mostra la domanda corrente e le opzioni
+async function loadQuestions() {
+  try {
+    const response = await fetch("questions.json");
+    const data = await response.json();
+    levels = data;
+  } catch (error) {
+    console.error("Errore durante il caricamento delle domande:", error);
+  }
+}
+
+// Funzione per mostrare la transizione tra i livelli
+function showLevelTransitionMessage() {
+  optionsClickable = false;
+  const levelTransitionMessage = document.getElementById("level-transition-message");
+  levelTransitionMessage.style.display = "block";
+
+  setTimeout(() => {
+    levelTransitionMessage.style.display = "none";
+    optionsClickable = true;
+    showQuestion();
+  }, 2000);
+}
+
+// Funzione per inizializzare il gioco
+function setupGame() {
+  currentLevel = 0;
+  score = 0;
+  showQuestion();
+}
+
+// Funzione per mostrare la domanda corrente e le opzioni
 function showQuestion() {
-    const currentQuestion = questions[currentQuestionIndex];
-    questionElement.textContent = currentQuestion.text;
-    optionsElement.innerHTML = "";
+  const currentQuestion = levels[currentLevel][currentQuestionIndex];
+  questionElement.textContent = currentQuestion.text;
+  optionsElement.innerHTML = "";
 
-    currentQuestion.options.forEach((option, index) => {
-        const optionButton = document.createElement("button");
-        optionButton.textContent = option;
-        optionButton.addEventListener("click", () => checkAnswer(index));
-        optionsElement.appendChild(optionButton);
+  currentQuestion.options.forEach((option, index) => {
+    const optionButton = document.createElement("button");
+    optionButton.textContent = option;
+    optionButton.addEventListener("click", () => {
+      if (optionsClickable) { // Verifica se le opzioni sono cliccabili
+        checkAnswer(index);
+      }
     });
+    optionsElement.appendChild(optionButton);
+  });
+
+  const levelIndicator = document.createElement("p");
+  levelIndicator.textContent = `Livello ${currentLevel + 1}`;
+  optionsElement.appendChild(levelIndicator);
 }
 
-// Controlla la risposta data dall'utente
+// Funzione per controllare la risposta data dall'utente
 function checkAnswer(selectedIndex) {
-    const currentQuestion = questions[currentQuestionIndex];
-    if (selectedIndex === currentQuestion.correctOption) {
-        score++;
-    }
-    
-    currentQuestionIndex++;
-    
-    if (currentQuestionIndex < questions.length) {
-        showQuestion();
+  const currentQuestion = levels[currentLevel][currentQuestionIndex];
+  if (selectedIndex === currentQuestion.correctOption) {
+    score++;
+  }
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < levels[currentLevel].length) {
+    showQuestion();
+  } else {
+    if (currentLevel < levels.length - 1) {
+      currentLevel++;
+      currentQuestionIndex = 0;
+      showLevelTransitionMessage();
     } else {
-        endGame();
+      endGame();
     }
+  }
 }
 
-// Avvia il timer
+// Funzione per avviare il timer
 function startTimer() {
-    timeLeft = 600;
-    timeLeftElement.textContent = timeLeft;
-    timerInterval = setInterval(updateTimer, 1000);
+  timeLeft = 600;
+  timeLeftElement.textContent = timeLeft;
+  timerInterval = setInterval(updateTimer, 1000);
 }
 
-// Aggiorna il timer e controlla se è scaduto
+// Funzione per aggiornare il timer e controllare se è scaduto
 function updateTimer() {
-    timeLeft--;
-    timeLeftElement.textContent = timeLeft;
-    if (timeLeft === 0) {
-        clearInterval(timerInterval);
-        checkAnswer(-1);  // Risposta scaduta
-    }
-}
-
-// Termina il gioco e mostra il punteggio finale
-function endGame() {
+  timeLeft--;
+  timeLeftElement.textContent = timeLeft;
+  if (timeLeft === 0) {
     clearInterval(timerInterval);
-    questionElement.textContent = "Game Over!";
-    optionsElement.innerHTML = "";
-    scoreElement.textContent = "Score: " + score;
-
-    addToLeaderboard(score); // Aggiungi il punteggio alla classifica
-    showLeaderboard(); // Mostra la classifica alla fine del gioco
+    checkAnswer(-1);  // Risposta scaduta
+  }
 }
 
-// Aggiungi il punteggio alla classifica
+// Funzione per terminare il gioco e mostrare il punteggio finale
+function endGame() {
+  clearInterval(timerInterval);
+  questionElement.textContent = "Game Over!";
+  optionsElement.innerHTML = "";
+  scoreElement.textContent = "Score: " + score;
+
+  addToLeaderboard(score);
+  
+}
+
+// Funzione per aggiungere il punteggio alla classifica
 function addToLeaderboard(score) {
-    const listItem = document.createElement("li");
-    listItem.textContent = `Score: ${score}`;
-    leaderboardList.appendChild(listItem);
+  const listItem = document.createElement("li");
+  listItem.textContent = `Score: ${score}`;
+  leaderboardList.appendChild(listItem);
 }
-
-function showLeaderboard() {
-    // Calcola il punteggio totale
-    var totalScore = calculateTotalScore(); // Da implementare
-
-    // Aggiungi il punteggio alla classifica
-    var leaderboardList = document.getElementById("leaderboard-list");
-    var leaderboardEntry = document.createElement("li");
-    leaderboardEntry.textContent = "Total Score: " + totalScore;
-    leaderboardList.appendChild(leaderboardEntry);
-
-    // ... (aggiungi altre voci alla classifica come necessario) ...
-}
-
-// Avvia il gioco al caricamento della pagina
 startSinglePlayer();
