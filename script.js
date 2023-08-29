@@ -141,9 +141,10 @@ function checkAnswer(selectedIndex) {
     const correctOptionIndex = currentQuestion.correctOption;
 
     if (selectedIndex === correctOptionIndex) {
-      score++;
+      currentQuestion.correctAnswers++;
       optionsElement.children[selectedIndex].classList.add("correct");
     } else if (selectedIndex !== -1) {
+      currentQuestion.incorrectAnswers++;
       optionsElement.children[selectedIndex].classList.add("incorrect");
       optionsElement.children[correctOptionIndex].classList.add("correct");
     }
@@ -153,7 +154,7 @@ function checkAnswer(selectedIndex) {
     if (currentQuestionIndex < currentLevelData.length) {
       setTimeout(() => {
         showQuestion();
-      }, 1000); // Mostra la domanda successiva dopo 1 secondo
+      }, 1000);
     } else {
       showLevelTransitionMessage();
     }
@@ -165,21 +166,22 @@ function endGame() {
   clearInterval(timerInterval);
   questionElement.textContent = "Game Over!";
   optionsElement.innerHTML = "";
-  scoreElement.textContent = "Score: " + score;
 
-  addToLeaderboard(score);
+  levels.forEach((levelData, levelIndex) => {
+    const correctAnswers = levelData.reduce((total, question) => total + question.correctAnswers, 0);
+    const incorrectAnswers = levelData.reduce((total, question) => total + question.incorrectAnswers, 0);
+
+    const resultMessage = document.createElement("p");
+    resultMessage.textContent = `Livello ${levelIndex + 1}: Domande corrette: ${correctAnswers}, Domande errate: ${incorrectAnswers}`;
+    resultMessage.classList.add("result-message");
+    optionsElement.appendChild(resultMessage);
+  });
 
   document.getElementById("change-level-button").style.display = "none";
   document.getElementById("end-game-button").style.display = "none";
   const levelTransitionMessage = document.getElementById("level-transition-message");
   levelTransitionMessage.style.display = "none";
-
 }
 
-function addToLeaderboard(score) {
-  const listItem = document.createElement("li");
-  listItem.textContent = `Score: ${score}`;
-  leaderboardList.appendChild(listItem);
-}
 
 startSinglePlayer(0);

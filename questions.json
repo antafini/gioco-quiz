@@ -3,306 +3,426 @@
     {
       "text": "Qual è la capitale della Francia?",
       "options": ["Berlino", "Parigi", "Roma", "Londra"],
-      "correctOption": 1
+      "correctOption": 1,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi scrisse 'Romeo e Giulietta'?",
       "options": ["Dante Alighieri", "William Shakespeare", "Leo Tolstoy", "Jane Austen"],
-      "correctOption": 1
+      "correctOption": 1,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Quale pianeta è conosciuto come 'Pianeta Rosso'?",
       "options": ["Marte", "Venere", "Giove", "Saturno"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'elemento chimico con simbolo H?",
       "options": ["Idrogeno", "Elio", "Ossigeno", "Azoto"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "In quale continente si trova l'Egitto?",
       "options": ["Africa", "Asia", "Europa", "America"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi dipinse la 'Mona Lisa'?",
       "options": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Quale famoso scienziato formulò la legge della gravitazione universale?",
       "options": ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Nikola Tesla"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è la più grande specie di balena?",
       "options": ["Balena azzurra", "Balena grigia", "Balena franca", "Balena giapponese"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Quale civiltà antica costruì le Piramidi?",
       "options": ["Romani", "Greci", "Egizi", "Babilonesi"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è la valuta del Giappone?",
       "options": ["Yen", "Won", "Dollaro", "Euro"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'organo più grande del corpo umano?",
       "options": ["Cuore", "Fegato", "Polmone", "Pelle"],
-      "correctOption": 3
+      "correctOption": 3,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Quale strumento musicale è associato a Johann Sebastian Bach?",
       "options": ["Violino", "Pianoforte", "Chitarra", "Organo"],
-      "correctOption": 3
+      "correctOption": 3,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi ha scritto l'opera 'La Traviata'?",
       "options": ["Giuseppe Verdi", "Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Giacomo Puccini"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "In quale anno l'uomo ha messo piede sulla Luna?",
       "options": ["1969", "1975", "1981", "1961"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'unità di misura della corrente elettrica?",
       "options": ["Volt", "Ohm", "Ampere", "Watt"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'oceano più grande?",
       "options": ["Oceano Atlantico", "Oceano Indiano", "Oceano Pacifico", "Oceano Artico"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Quale gas rappresenta circa il 78% dell'atmosfera terrestre?",
       "options": ["Azoto", "Ossigeno", "Anidride carbonica", "Metano"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi ha dipinto 'La Notte Stellata'?",
       "options": ["Pablo Picasso", "Vincent van Gogh", "Leonardo da Vinci", "Claude Monet"],
-      "correctOption": 1
+      "correctOption": 1,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Quale famoso discorso inizia con 'I have a dream'?",
       "options": ["Discorso di insediamento di John F. Kennedy", "Discorso di Martin Luther King Jr.", "Discorso di Franklin D. Roosevelt", "Discorso di Ronald Reagan"],
-      "correctOption": 1
+      "correctOption": 1,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Quale montagna è la più alta del mondo?",
       "options": ["Monte Kilimanjaro", "Monte Bianco", "Monte Everest", "Monte Fuji"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     }
   ],
   [
     {
       "text": "Quale processo consente alle piante di produrre il proprio cibo?",
       "options": ["Fotosintesi", "Respirazione", "Fermentazione", "Decomposizione"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'opera più famosa di Leonardo da Vinci?",
       "options": ["L'Ultima Cena", "La Nascita di Venere", "La Gioconda", "Notte Stellata"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi ha scritto '1984'?",
       "options": ["Aldous Huxley", "George Orwell", "Ray Bradbury", "Kurt Vonnegut"],
-      "correctOption": 1
+      "correctOption": 1,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è il fiume più lungo del mondo?",
       "options": ["Nilo", "Mississippi", "Amazzonia", "Gange"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Quale fenomeno naturale è misurato dalla scala Richter?",
       "options": ["Temperatura", "Pressione atmosferica", "Intensità luminosa", "Terremoto"],
-      "correctOption": 3
+      "correctOption": 3,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "In chimica, quale elemento ha il numero atomico 6?",
       "options": ["Carbonio", "Azoto", "Idrogeno", "Ossigeno"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è il processo attraverso il quale l'acqua evapora dalle foglie delle piante?",
       "options": ["Capillarità", "Fotosintesi", "Traspirazione", "Condensazione"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi è stato il primo presidente degli Stati Uniti?",
       "options": ["Thomas Jefferson", "George Washington", "Abraham Lincoln", "Benjamin Franklin"],
-      "correctOption": 1
+      "correctOption": 1,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è il secondo libro dell'Antico Testamento?",
       "options": ["Esodo", "Levitico", "Genesi", "Daniele"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Quale famoso compositore era sordo?",
       "options": ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Johann Sebastian Bach", "Antonio Vivaldi"],
-      "correctOption": 1
+      "correctOption": 1,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi ha scritto 'Don Chisciotte'?",
       "options": ["Miguel de Cervantes", "Friedrich Nietzsche", "Voltaire", "Oscar Wilde"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è la valuta degli Stati Uniti?",
       "options": ["Dollaro", "Euro", "Yen", "Sterlina britannica"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi ha dipinto 'L'Urlo'?",
       "options": ["Pablo Picasso", "Salvador Dalí", "Edvard Munch", "Claude Monet"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'organo responsabile di pompare il sangue nel corpo umano?",
       "options": ["Cervello", "Cuore", "Polmone", "Stomaco"],
-      "correctOption": 1
+      "correctOption": 1,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'unità di misura della forza?",
       "options": ["Watt", "Joule", "Newton", "Ohm"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi ha scritto 'Madame Bovary'?",
       "options": ["Gustave Flaubert", "Victor Hugo", "Émile Zola", "Albert Camus"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "In quale città si trova la sede delle Nazioni Unite?",
       "options": ["New York", "Parigi", "Ginevra", "Londra"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è il processo in cui un solido passa direttamente allo stato gassoso senza passare per lo stato liquido?",
       "options": ["Erosione", "Sublimazione", "Condensazione", "Evaporazione"],
-      "correctOption": 1
+      "correctOption": 1,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Quale teoria scientifica sostiene che tutte le forme di vita discendono da un antenato comune?",
       "options": ["Teoria della relatività", "Teoria della selezione naturale", "Teoria atomica", "Teoria dell'evoluzione"],
-      "correctOption": 3
+      "correctOption": 3,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è il più grande deserto caldo del mondo?",
       "options": ["Deserto del Sahara", "Deserto di Sonora", "Deserto del Kalahari", "Deserto dell'Arabia"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     }
   ],
   [
     {
       "text": "Qual è la definizione di entropia in termodinamica?",
       "options": ["Misura della temperatura di un sistema", "Misura del disordine di un sistema", "Misura della pressione di un sistema", "Misura della velocità di un sistema"],
-      "correctOption": 1
+      "correctOption": 1,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi ha scritto l'opera 'Guerra e pace'?",
       "options": ["Fyodor Dostoevsky", "Anton Chekhov", "Leo Tolstoy", "Ivan Turgenev"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'elemento chimico con simbolo Fe?",
       "options": ["Ferro", "Zinco", "Rame", "Oro"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "In matematica, cosa rappresenta il numero 'pi' (π)?",
       "options": ["Costante di gravità", "Numero di Avogadro", "Rapporto tra circonferenza e diametro", "Velocità della luce"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi è stato il primo uomo a raggiungere il Polo Sud?",
       "options": ["Roald Amundsen", "Ernest Shackleton", "Robert Falcon Scott", "Edmund Hillary"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'opera di Shakespeare in cui appare il personaggio di Otello?",
       "options": ["Romeo e Giulietta", "Macbeth", "Otello", "Il mercante di Venezia"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi ha formulato la teoria dell'evoluzione biologica attraverso la selezione naturale?",
       "options": ["Charles Darwin", "Alfred Russel Wallace", "Gregor Mendel", "Jean-Baptiste Lamarck"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'organo più esteso del corpo umano?",
       "options": ["Fegato", "Intestino tenue", "Polmone", "Pelle"],
-      "correctOption": 3
+      "correctOption": 3,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "In quale anno è stata firmata la Dichiarazione d'Indipendenza degli Stati Uniti?",
       "options": ["1776", "1789", "1804", "1812"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi ha scritto 'Il processo'?",
       "options": ["Franz Kafka", "Albert Camus", "Fyodor Dostoevsky", "Hermann Hesse"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Quale filosofo greco è stato il maestro di Aristotele?",
       "options": ["Platone", "Socrate", "Empedocle", "Eraclito"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'opera principale di Dante Alighieri?",
       "options": ["La Divina Commedia", "Il Decamerone", "Le Mille e una notte", "I Promessi Sposi"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi ha dipinto la Cappella Sistina?",
       "options": ["Michelangelo", "Raffaello", "Leonardo da Vinci", "Donatello"],
-      "correctOption": 0
+      "correctOption": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'unità di misura della capacità elettrica?",
       "options": ["Ampere", "Farad", "Ohm", "Volt"],
-      "correctOption": 1
+      "correctOption": 1,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'effetto fotoelettrico?",
       "options": ["Emissione di luce da un materiale", "Conducibilità termica di un materiale", "Emissione di elettroni da un materiale per esposizione alla luce", "Assorbimento di luce da un materiale"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Chi ha scritto il 'Critone'?",
       "options": ["Socrate", "Aristotele", "Platone", "Eraclito"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è il processo attraverso il quale le rocce si rompono a causa dell'azione della temperatura e della pressione?",
       "options": ["Erosione", "Decomposizione", "Fusione", "Metamorfismo"],
-      "correctOption": 3
+      "correctOption": 3,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Cosa rappresenta il numero di Avogadro?",
       "options": ["Numero di pianeti nel sistema solare", "Numero di costellazioni", "Numero di atomi in una mole", "Numero di particelle elementari nell'universo"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual è l'opera più lunga della letteratura russa?",
       "options": ["Anna Karenina", "Crimine e castigo", "I demoni", "Guerra e pace"],
-      "correctOption": 3
+      "correctOption": 3,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     },
     {
       "text": "Qual era l'antico nome della città di Istanbul?",
       "options": ["Atene", "Costantinopoli", "Bisanzio", "Troia"],
-      "correctOption": 2
+      "correctOption": 2,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0
     }
   ]
 ]

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizDelMasterPalleGrosse 3000</title>
+    <title>Quiz Master Sopatani</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -10,21 +10,17 @@
         Fai La Tua Scelta...
         <div class="spinner"></div>
         <div class="level-options">
-            <button id="change-level-button" onclick="changeLevel()">Cambia Livello</button>
+            <button id="change-level-button" onclick="changeLevel()">Passa al Livello Successivo</button>
             <button id="end-game-button" onclick="endGame()">Termina Gioco</button>
         </div>
     </div>    
-    <div class="leaderboard">
-        <h2>Classifica</h2>
-        <ol id="leaderboard-list" class="score"></ol>
-    </div>
     <div class="quiz-container">
         <div id="new-game-message" class="loading-message">
             Nuova partita in corso!!
             <div class="spinner"></div>
         </div>        
         <div class="header">
-            <h1>Benvenuti nel Quiz Del Master Palle Grosse 3000!</h1>
+            <h1>Benvenuti nel Quiz Master Sopatani</h1>
             <div class="timer">
                 <p>Time Left: <span id="time-left">600</span> seconds</p>
             </div>
@@ -39,9 +35,6 @@
                 </div>                
                 <h2 id="question"></h2>
                 <div class="options" id="options"></div>
-                <div class="result">
-                    <p><span id="score" class="invisible"></span></p>
-                </div>
                 <p id="question-number" class="question-number"></p>
             </div>
         </div>
