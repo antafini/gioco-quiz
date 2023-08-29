@@ -190,6 +190,52 @@ body {
     100% { transform: rotate(360deg); }
 }
 
+.question-number {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.mode-selection label, .mode-selection input {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.level-options {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#change-level-button, #end-game-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#next-level-button:hover, #end-game-button:hover {
+    background-color: #2980b9;
+}
+
+/* Stili per opzioni corrette */
+.options button.correct {
+    background-color: #32CD32; /* Verde */
+    border: 2px solid #228B22; /* Verde più scuro */
+}
+
+/* Stili per opzioni errate */
+.options button.incorrect {
+    background-color: #FF6347; /* Rosso */
+    border: 2px solid #FF4500; /* Rosso più scuro */
+}
+
+
+
 @media (max-width: 600px) {
     .quiz-container {
         padding: 5px;

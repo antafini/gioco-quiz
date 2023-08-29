@@ -7,8 +7,12 @@
 </head>
 <body>
     <div id="level-transition-message" class="loading-message">
-        Passaggio al livello successivo...
+        Fai La Tua Scelta...
         <div class="spinner"></div>
+        <div class="level-options">
+            <button id="change-level-button" onclick="changeLevel()">Cambia Livello</button>
+            <button id="end-game-button" onclick="endGame()">Termina Gioco</button>
+        </div>
     </div>    
     <div class="leaderboard">
         <h2>Classifica</h2>
@@ -28,13 +32,17 @@
         <div class="content">
             <div class="question-container">
                 <div class="mode-selection">
-                    <button onclick="startSinglePlayer()">Start e Restart</button>
-                </div>
+                    <label for="starting-level">Scegli il livello iniziale:</label>
+                    <button onclick="startSinglePlayer(0)">Livello 1</button>
+                    <button onclick="startSinglePlayer(1)">Livello 2</button>
+                    <button onclick="startSinglePlayer(2)">Livello 3</button>
+                </div>                
                 <h2 id="question"></h2>
                 <div class="options" id="options"></div>
                 <div class="result">
                     <p><span id="score" class="invisible"></span></p>
                 </div>
+                <p id="question-number" class="question-number"></p>
             </div>
         </div>
     </div>
